@@ -1,0 +1,64 @@
+html, body {
+  margin: 0px;
+  padding: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+header {
+  margin-bottom: 130px;
+}
+
+footer {
+  margin-top: 100px;
+}
+
+.container {
+  box-sizing: border-box;
+  width: 1366px;
+  padding: 30px;
+  margin: 0 auto;
+}
+
+.menu {
+  margin-bottom: 100px;
+}
+
+.menu label {
+  width: 150px;
+  display: inline-block;
+}
+
+.menu input[type="number"] {
+  width: 40px;
+}
+
+.content {
+  display: flex;
+}
+
+.content > div {
+  flex: 1;
+}
+
+.content > .board {
+  flex: 1 0 650;
+  padding: 25px;
+  box-sizing: border-box;
+}
+
+footer {
+  display: flex;
+}
+
+footer > .design {
+  flex: 0 0 500px;
+}
+
+footer > .prog {
+  flex: 1;
+}
+
+footer > .mome {
+  flex: 0 0 80px;
+}

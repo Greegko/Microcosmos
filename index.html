@@ -16,27 +16,27 @@
     <div class="content">
       <div>
         <div class="menu">
-          Size:
+          <label>Size:</label>
           <input name='size' type='range' min="15" max='60' value="25" />
           <input type='number' min="15" max='60' value="25" name="size" value="25" />
           <br />
-          Lines:
+          <label>Lines:</label>
           <input name='lines' type='range' min="1" max='6' value="1" />
           <input type='number' min="1" max='6' value="1" name="lines" value="1" />
           <br />
-          Angle:
+          <label>Angle:</label>
           <input name='angle' type='range' min="-360" max='360' value="96" />
           <input type='number' min="-360" max='360' value="96" name="angle" value="96" />
           <br />
-          Repetation:
+          <label>Repetation:</label>
           <input name='repetation' type='range' min="1" max='100' value="25" />
           <input type='number' min="1" max='100' value="25" name="repetation" value="30" />
           <br />
-          Spacing:
+          <label>Spacing:</label>
           <input name='spacing' type='range' min="0" max='150' value="25" />
           <input type='number' min="0" max='150' value="25" name="spacing" value="45" />
           <br />
-          Height Spacing:
+          <label>Height Spacing:</label>
           <input name='heightspacing' type='range' min="0" max='150' value="25" />
           <input type='number' min="0" max='150' value="25" name="heightspacing" value="45" />
           <br />
@@ -45,19 +45,21 @@
           Bartók Béla méltán elismert művében az egymásra épülő, egyre komplexebb zongoradarabok mentén vezet el minket egy összetett, biztos muzikális tudás elsajátításához. Ezt a gondolkodásmódot követi munkánk vizuális koncepciója is. Meghatározott rendszer szerint felépített, egyre összetettebb kompozíciók alakulnak, játszhatók le a darabok tanulása során. Az általunk definiált vizuális rendszer is ezt a dinamikát képezi le. A hatszög motívuma a zongoradarobok köteteinek számára utal. Az egyes fejezetek alapmotívumai (1-6) a fejezetszámmal megegyező vonalból álló alakzatok. Így tehát az első fejezet egy vonal, a második fejezet kettő, míg a harmadik-negyedik egy háromszög és egy négyzet, majd ötszög és hatszög.
         </div>
       </div>
-      <canvas id='board' height=650 width=650></canvas>
+      <div class="board">
+        <canvas id='board' height=650 width=650></canvas>
+      </div>
     </div>
 
     <footer>
-      <div>
+      <div class="design">
         Koncepció, Grafika<br />
         Takács Benedek, Molnár Dávid
       </div>
-      <div>
+      <div class="prog">
           Programozás<br />
           Szauer György
       </div>
-      <div>
+      <div class="mome">
           MOME<br />
           2018
       </div>
