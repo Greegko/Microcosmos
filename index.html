@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Microcosmos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+</head>
+<body>
+  <div>
+    Size: <input name='size' type='range' min="15" max='60' value="25" /><span id="size_value">25</span><br />
+    Lines: <input name='lines' type='range' min="1" max='6' value="1" /><span id="lines_value">1</span><br />
+    Angle: <input name='angle' type='range' min="-360" max='360' value="96" /><span id="angle_value">96</span><br />
+    Repetation: <input name='repetation' type='range' min="1" max='50' value="11" /><span id="repetation_value">1</span><br />
+    Spacing: <input name='spacing' type='range' min="0" max='150' value="25" /><span id="spacing_value">45</span><br />
+  </div>
+  <canvas id='board' height=500 width=500></canvas>
+  <script src="script.js"></script>
+</body>
+</html>
