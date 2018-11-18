@@ -14,9 +14,13 @@ function render(config) {
   boardctx.clearRect(0, 0, board.width, board.height);
   const shapeLineDef = Shapes[config.lines - 1];
   
-  for(var i = 0; i < config.repetation; i++) {
+  for(var i = 0, column = 0, row = 0; i < config.repetation; i++, column++) {
     const shapeCanvas = drawShape(shapeLineDef, config.angle * i, config.size);
-    boardctx.drawImage(shapeCanvas, config.spacing * i, 0);
+    if(config.spacing * (column + 1) + config.size > board.width){
+      row++;
+      column = 0;
+    }
+    boardctx.drawImage(shapeCanvas, config.spacing * column, row * config.size * 2);
   }
 }
 
@@ -66,7 +70,7 @@ const config = { size: 25, lines: 1, angle: 96, repetation: 5, spacing: 45 };
 
 function updateProperties(event) {
   const prop = event.target.name;
-  config[prop] = event.target.value;
+  config[prop] = parseInt(event.target.value);
   document.getElementById(prop +'_value').innerHTML = event.target.value;
   render(config);
 }
