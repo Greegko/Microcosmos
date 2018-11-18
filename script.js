@@ -20,7 +20,7 @@ function render(config) {
       row++;
       column = 0;
     }
-    boardctx.drawImage(shapeCanvas, config.spacing * column, row * config.size * 2);
+    boardctx.drawImage(shapeCanvas, config.spacing * column, row * config.heightspacing);
   }
 }
 
@@ -66,7 +66,7 @@ function lineCanvas(angle, Unit) {
   return lineCanvas;
 }
 
-const config = { size: 25, lines: 1, angle: 96, repetation: 5, spacing: 45 };
+const config = { size: 25, lines: 1, angle: 96, repetation: 5, spacing: 45, heightspacing: 45 };
 
 function updateProperties(event) {
   const prop = event.target.name;
@@ -85,6 +85,7 @@ document.querySelector('input[name=lines]').addEventListener('input', updateProp
 document.querySelector('input[name=angle]').addEventListener('input', updateProperties);
 document.querySelector('input[name=repetation]').addEventListener('input', updateProperties);
 document.querySelector('input[name=spacing]').addEventListener('input', updateProperties);
+document.querySelector('input[name=heightspacing]').addEventListener('input', updateProperties);
 
 window.addEventListener('resize', onResize);
 
