@@ -16,7 +16,7 @@ function render(config) {
   
   for(var i = 0, column = 0, row = 0; i < config.repetation; i++, column++) {
     const shapeCanvas = drawShape(shapeLineDef, config.angle * i, config.size);
-    if(config.spacing * (column + 1) + config.size > board.width){
+    if(config.spacing * (column + 2) + config.size > board.width){
       row++;
       column = 0;
     }
