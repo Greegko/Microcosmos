@@ -76,11 +76,6 @@ function updateProperties(event) {
   render(config);
 }
 
-function onResize() {
-  board.width = window.innerWidth;
-  render(config);
-}
-
 function addInputHook(name) {
   document.getElementsByName(name).forEach(
     (node) => node.addEventListener('input', updateProperties)
@@ -94,6 +89,4 @@ addInputHook('repetation');
 addInputHook('spacing');
 addInputHook('heightspacing');
 
-window.addEventListener('resize', onResize);
-
-onResize();
+render(config);
