@@ -66,7 +66,7 @@ function lineCanvas(angle, Unit) {
   return lineCanvas;
 }
 
-const config = { size: 25, lines: 1, angle: 96, repetation: 5, spacing: 45, heightspacing: 45 };
+const config = { size: 25, lines: 1, angle: 96, repetation: 30, spacing: 45, heightspacing: 45 };
 
 function updateProperties(event) {
   const prop = event.target.name;
