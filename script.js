@@ -70,8 +70,9 @@ const config = { size: 25, lines: 1, angle: 96, repetation: 30, spacing: 45, hei
 
 function updateProperties(event) {
   const prop = event.target.name;
-  config[prop] = parseInt(event.target.value);
-  document.getElementById(prop +'_value').innerHTML = event.target.value;
+  const val = parseInt(event.target.value);
+  config[prop] = val;
+  document.getElementsByName(event.target.name).forEach((node) => node.value = val);
   render(config);
 }
 
@@ -80,12 +81,18 @@ function onResize() {
   render(config);
 }
 
-document.querySelector('input[name=size]').addEventListener('input', updateProperties);
-document.querySelector('input[name=lines]').addEventListener('input', updateProperties);
-document.querySelector('input[name=angle]').addEventListener('input', updateProperties);
-document.querySelector('input[name=repetation]').addEventListener('input', updateProperties);
-document.querySelector('input[name=spacing]').addEventListener('input', updateProperties);
-document.querySelector('input[name=heightspacing]').addEventListener('input', updateProperties);
+function addInputHook(name) {
+  document.getElementsByName(name).forEach(
+    (node) => node.addEventListener('input', updateProperties)
+  );
+}
+
+addInputHook('size');
+addInputHook('lines');
+addInputHook('angle');
+addInputHook('repetation');
+addInputHook('spacing');
+addInputHook('heightspacing');
 
 window.addEventListener('resize', onResize);
 
