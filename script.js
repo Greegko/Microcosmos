@@ -96,4 +96,4 @@ addInputHook('heightspacing');
 
 window.addEventListener('resize', onResize);
 
-render(config);
+onResize();
